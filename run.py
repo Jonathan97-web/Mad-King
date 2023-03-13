@@ -4,11 +4,11 @@ import os
 # Displays starting message
 def prompt():
     print("\t\t\tWelcome to the Mad King's Castle\n\n\
-        You have to collect two items to fight the Mad King.\n\n\
-        Moves:\t'go {direction}' (travel, north, south, east, or west)\n\
+        You have to collect two items to defeat the Mad King.\n\n\
+        Moves:\t'go {direction}' (travel north, south, east, or west)\n\
         \t'get {item}' (add nearby item to inventory)\n\n")
 
-    input("Press any key to continue ...")
+    input("Press ENTER to continue ...")
 
 
 # Clears screen from messages
@@ -24,10 +24,11 @@ rooms = {
     'Castle Gates': {'East': 'Castle Main Hall', 'South': 'Castle Gardens'},
     'Castle Main Hall': {'South': 'Royal Chambers',
                          'West': 'Castle Gates', 'East': 'Castle Kitchens'},
-    'Royal Chambers': {'North': 'Castle Main Hall', 'Boss': 'Mad King'},
+    'Royal Chambers': {'North': 'Castle Main Hall', 'Madking': 'Mad King'},
     'Castle Kitchens': {'South': 'Castle Storage', 'West': 'Castle Main Hall'},
-    'Castle Storage': {'North': 'Castle Kitchens', 'Boss': 'Kitchen Witch'}
+    'Castle Storage': {'North': 'Castle Kitchens', 'Item': 'Magical Armour', 'Witch': 'Kitchen Witch'}
     }
+
 # List of vowels
 vowels = ['a', 'e', 'i', 'o', 'u']
 
@@ -72,18 +73,31 @@ while True:
             else:
                 print(f"You see a {nearby_item}")
 
-    # Boss encounter
-    if "Boss" in rooms[current_room].keys():
+    # Mad King encounter
+    if "Madking" in rooms[current_room].keys():
 
         # Lose
         if len(inventory) < 2:
-            print(f"You lost a fight with {rooms[current_room]['Boss']}.")
+            print(f"You lost a fight with {rooms[current_room]['Madking']}. Your adventure ends here and no one will remember you.")
             break
 
         # Win
         else:
-            print(f"You beat {rooms[current_room]['Boss']}!")
+            print(f"You beat {rooms[current_room]['Madking']}! Tales will be told about your adventure.")
             break
+
+            # Witch encounter
+    if "Witch" in rooms[current_room].keys():
+
+        # Lose
+        if len(inventory) < 1:
+            print(f"You lost a fight with {rooms[current_room]['Witch']}. Your adventure ends here and no one will remember you.")
+            break
+
+        # Win
+        else:
+            print(f"You beat {rooms[current_room]['Witch']}! You need to find the Mad King and end his terror!")
+
 
     # Accept player's move as input
     user_input = input('Enter your move: \n')
@@ -112,7 +126,6 @@ while True:
 
     # Picking up items
     elif action == 'Get':
-
         try:
             if item == rooms[current_room]["Item"]:
 
@@ -130,5 +143,5 @@ while True:
             msg = f"Can't find {item}."
 
         # Any other commands invalid
-        else:
-            msg = "Invalid Command"
+    else:
+        msg = "Invalid Command"
