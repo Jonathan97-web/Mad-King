@@ -1,8 +1,8 @@
 import os
 
 
-# Displays starting message
 def prompt():
+    ''' Displays starting message '''
     print("\t\t\tWelcome to the Mad King's Castle\n\n\
         You have to collect two items to defeat the Mad King.\n\n\
         Moves:\t'go {direction}' (travel north, south, east, or west)\n\
@@ -11,8 +11,8 @@ def prompt():
     input("Press ENTER to continue ...")
 
 
-# Clears screen from messages
 def clear():
+    ''' Clears screen from messages '''
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
@@ -96,7 +96,10 @@ while True:
 
         # Win
         else:
-            print(f"You beat {rooms[current_room]['Witch']}! You need to find the Mad King and end his terror!")
+            print(
+                f"You beat {rooms[current_room]['Witch']}! "
+                "You need to find the Mad King and end his terror!"
+            )
 
 
     # Accept player's move as input
@@ -121,7 +124,7 @@ while True:
             current_room = rooms[current_room][direction]
             msg = f"You travel to {direction}."
 
-        except:
+        except Exception:
             msg = f"You can't go that way."
 
     # Picking up items
@@ -139,7 +142,7 @@ while True:
 
             else:
                 msg = f"Can't find {item}."
-        except:
+        except Exception:
             msg = f"Can't find {item}."
 
         # Any other commands invalid
