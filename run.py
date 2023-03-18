@@ -90,7 +90,7 @@ while True:
         print(
             "You arrive at Clear Grounds,\n"
             "North of you, you see a castle fitting a King. \n "
-            "East of you you see an empty barracks "
+            "East of you you see an empty barracks \n"
             "which looks it could contain something useful."
             )
 
@@ -116,7 +116,7 @@ while True:
             "You arrive at the Castle Gates \n"
             "You see no sign of life in this area either \n"
             "You start to wonder if it's a good idea to enter the castle. \n"
-            "You feel pulled towards the castle \n"
+            "You feel pulled towards the castle. \n"
             "To the East you can see the Castle Main Hall \n"
             "To the South you can see the Castle Gardens"
         )
@@ -160,30 +160,8 @@ while True:
             "You arrive at the Castle Storage \n"
             "You see a figure in front of you. \n"
             "The figure approaches you \n"
-            "It's a witch! She takes a swing at you \n"
+            "It's a witch! She takes a swing at you \n\n"
         )
-        input('Press ENTER to attack')
-        clear()
-
-    # Item indicator
-    if "Item" in rooms[current_room].keys():
-
-        nearby_item = rooms[current_room]["Item"]
-
-        if nearby_item not in inventory:
-
-            # Plural
-            if nearby_item[-1] == 's':
-                print(
-                    f"You see {Fore.RED}{nearby_item}"
-                    )
-
-            # Singular item starts with vowel
-            elif nearby_item[0] in vowels:
-                print(f"You see an {Fore.RED}{nearby_item}")
-            # Singular item starts with consanant
-            else:
-                print(f"You see a {Fore.RED}{nearby_item}")
 
     # Mad King encounter
     if "Madking" in rooms[current_room].keys():
@@ -238,6 +216,26 @@ while True:
                 "as she was never there in the first place. \n"
                 "You need to find the Mad King and end his terror!"
             )
+
+    # Item indicator
+    if "Item" in rooms[current_room].keys():
+
+        nearby_item = rooms[current_room]["Item"]
+
+        if nearby_item not in inventory:
+
+            # Plural
+            if nearby_item[-1] == 's':
+                print(
+                    f"You see {Fore.RED}{nearby_item}"
+                    )
+
+            # Singular item starts with vowel
+            elif nearby_item[0] in vowels:
+                print(f"You see an {Fore.RED}{nearby_item}")
+            # Singular item starts with consanant
+            else:
+                print(f"You see a {Fore.RED}{nearby_item}")
 
 
 # Accept player's move as input
