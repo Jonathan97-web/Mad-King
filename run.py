@@ -48,7 +48,10 @@ rooms = {
 
 
 # List of directions
-directions = "North, South, West or East"
+directions = (
+    f"{Fore.RED}North, {Fore.BLUE}South, "
+    f"{Fore.GREEN}West, {Fore.CYAN}East"
+        )
 
 # List of vowels
 vowels = ['a', 'e', 'i', 'o', 'u']
@@ -74,7 +77,7 @@ while True:
     print(
         f"You are in the {current_room}\n"
     )
-    print(f"You can go {directions}")
+    print(f"You can go: {directions}")
     print(f"To pickup items write 'Get (Item)'")
     print(
         f"Backpack items: {Fore.RED}{inventory}"
@@ -85,19 +88,18 @@ while True:
     print(msg)
 
     # Zone messages
-
     if current_room == "Clear Grounds":
         print(
             "You arrive at Clear Grounds,\n"
-            "North of you, you see a castle fitting a King. \n "
-            "East of you you see an empty barracks \n"
+            "To the North you see a castle fitting a King. \n "
+            "To the East you see an empty barracks \n"
             "which looks it could contain something useful."
             )
 
     if current_room == "Mythical Armoury":
         print(
             "You arrive at the Mythical armoury, \n"
-            "East of you is the Clear Grounds \n"
+            "To the West is the Clear Grounds \n"
             "In one of the weapon racks you see a Sword hanging there.\n"
             "Will you pick it up?"
         )
@@ -138,7 +140,7 @@ while True:
             "In the room you can see what looks \n"
             "like to be the king of the castle. \n"
             "You try to converse with the king \n"
-            "But the king is obviously mad and doesn't listen \n"
+            "But the king is obviously mad and won't listen \n"
             "He screams traitor and goes on the offense."
         )
         input('Press ENTER to attack')
@@ -181,7 +183,8 @@ while True:
         else:
             print(
                 f"You beat {Fore.BLUE}{rooms[current_room]['Madking']}! \n"
-                "As you killed the Mad King the castle disappeared. \n"
+                f"{Fore.WHITE}As you killed the"
+                "Mad King the castle disappeared. \n"
                 "You're standing in the middle of nowhere. \n"
                 "Perhaps it's you who should question your sanity? \n"
                 "Congratulations on beating the game! \n"
@@ -210,7 +213,8 @@ while True:
         else:
             print(
                 f"You beat {Fore.BLUE}{rooms[current_room]['Witch']}!\n"
-                "Since you picked up the Sword you were able to block \n"
+                f"{Fore.WHITE}Since you picked up the "
+                "Sword you were able to block \n"
                 "the witches attack and counter-attack. \n"
                 "As you killed the witch she disappeared, \n"
                 "as she was never there in the first place. \n"
@@ -237,8 +241,7 @@ while True:
             else:
                 print(f"You see a {Fore.RED}{nearby_item}")
 
-
-# Accept player's move as input
+    # Accept player's move as input
     user_input = input('Enter your move: \n')
 
     # Splits move into words
@@ -281,6 +284,6 @@ while True:
         except Exception:
             msg = f"Can't find {item}."
 
-        # Any other commands invalid
+    # Any other commands invalid
     else:
         msg = "Invalid Command"
