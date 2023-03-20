@@ -10,6 +10,18 @@ I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jonathan97-web/mad-king/main/run.py) | ![screenshot](documentation/validation-python.png) | All clear, no errors found. |
+
+
+## Lighthouse Audit
+
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+| Page | Size | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Home | Desktop | ![screenshot](documentation/lighthouse-desktop.png) | Few warnings |
+| Home | Mobile | ![screenshot](documentation/lighthouse-mobile.png) | Few warnings |
+
 ## Defensive Programming
 
 
@@ -28,3 +40,5 @@ PP3 (Python-only):
 ## Unfixed Bugs
 
 There are no remaining bugs that I am aware of.
+
+---
