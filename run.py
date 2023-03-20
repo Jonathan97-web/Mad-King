@@ -91,14 +91,14 @@ while True:
     if current_room == "Clear Grounds":
         print(
             "You arrive at Clear Grounds,\n"
-            "To the North you see a castle fitting a King. \n "
-            "To the East you see an empty barracks \n"
+            "To the North you see a castle fitting a King. \n"
+            "To the East you see an empty barracks, \n"
             "which looks it could contain something useful."
             )
 
     if current_room == "Mythical Armoury":
         print(
-            "You arrive at the Mythical armoury, \n"
+            "You arrive at the Mythical Armoury, \n"
             "To the West is the Clear Grounds \n"
             "In one of the weapon racks you see a Sword hanging there.\n"
             "Will you pick it up?"
@@ -125,9 +125,9 @@ while True:
 
     if current_room == "Castle Main Hall":
         print(
-            "You arrive at the Castle Main Hall \n"
-            "You see a big table in the center of the room \n"
-            "The table is dined as if someone had dinner here recently \n"
+            "You arrive at the Castle Main Hall. \n"
+            "You see a big table in the center of the room. \n"
+            "The table is dined as if someone had dinner here recently. \n"
             "Will you venture further? \n"
             "To the East you can see a door what seems to be "
             "the Castle Kitchens \n"
@@ -174,6 +174,7 @@ while True:
                 "You lost a fight against \n"
                 f"{Fore.BLUE}{rooms[current_room]['Madking']}. \n"
                 "Your adventure ends here and no one will remember you."
+                "Perhaps you forgot an item along the way? \n"
             )
 
             input("Press ENTER to reset the game...")
