@@ -10,9 +10,6 @@
 [**Live site**](https://gointothedungeon.herokuapp.com)
 
 # Table of contents
-- [User stories](#user-stories)
-    - [New Site Users](#new-site-users)
-    - [Returning Site Users](#returning-site-users)
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Future Features](#future-features)
@@ -34,22 +31,6 @@
 
 ---
 
-## User Stories
-
-### New Site Users
-
-- As a new site user, I would like to have clear instructions, so that I can play the game the intended way.
-- As a new site user, I would like to navigate easily, so that I can complete the game.
-- As a new site user, I would like for the application to be straightforward, so that I can understand it easily.
-- As a new site user, I would like to see clear descriptions, so that I can appreciate the story.
-
-### Returning Site Users
-
-- As a returning site user, I would like to see new features, so there is more replayability.
-- As a returning site user, I would like to see a restart game function, so that I can replay the game.
-- As a returning site user, I would like to see a game that is easy to play, so that I want to come back and play it again.
-
----
 
 ## Features
 
@@ -266,10 +247,14 @@ As of writing this there will be no difference between the local and the deploye
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [YouTube](https://www.youtube.com/watch?v=lI6S2-icPHE) | Python Tutorial | For creating the game |
 | [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
+| [Github](https://gist.github.com/jrosco/d01b28c2f37100bb5278) | PP3 terminal | Code for restarting the game |
+
 
 ### Media
 
 For this project no external media was used for creation of this project.
+
+
 
 ### Acknowledgements
 
