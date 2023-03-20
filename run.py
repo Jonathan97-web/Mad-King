@@ -120,11 +120,11 @@ while True:
 
     if current_room == "Castle Gates":
         print(
-            "You arrive at the Castle Gates \n"
-            "You see no sign of life in this area either \n"
+            "You arrive at the Castle Gates. \n"
+            "You see no sign of life in this area either. \n"
             "You start to wonder if it's a good idea to enter the castle. \n"
             "You feel pulled towards the castle. \n"
-            "To the East you can see the Castle Main Hall \n"
+            "To the East you can see the Castle Main Hall. \n"
             "To the South you can see the Castle Gardens"
         )
 
@@ -144,8 +144,8 @@ while True:
             "You arrive at the Royal Chambers. \n"
             "In the room you can see what looks \n"
             "like to be the king of the castle. \n"
-            "You try to converse with the king \n"
-            "But the king is obviously mad and won't listen \n"
+            "You try to converse with the king, \n"
+            "but the king is obviously mad and won't listen \n"
             "He screams traitor and goes on the offense."
         )
         input('Press ENTER to attack')
