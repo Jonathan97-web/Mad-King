@@ -7,10 +7,15 @@ colorama.init(autoreset=True)
 
 def prompt():
     ''' Displays starting message '''
-    print("\t\t\tWelcome to the Mad King's Castle\n\n\
+    print(
+        "\t\t\tWelcome to the Mad King's Castle\n\n\
         You have to collect two items to defeat the Mad King.\n\n\
         Moves:\t'go {direction}' (travel north, south, east, or west)\n\
-        \t'get {item}' (add nearby item to inventory)\n\n")
+        \t'get {item}' (add nearby item to inventory)\n\n"
+        "This game was created as a project for Code Institute \n"
+        "Game created by: Jonathan Zakrisson \n"
+        "www.github.com/Jonathan97-web \n"
+        )
 
     input("Press ENTER to continue ...")
 
@@ -184,7 +189,7 @@ while True:
         else:
             print(
                 f"You beat {Fore.BLUE}{rooms[current_room]['Madking']}! \n"
-                f"{Fore.WHITE}As you killed the"
+                f"{Fore.WHITE}As you killed the "
                 "Mad King the castle disappeared. \n"
                 "You're standing in the middle of nowhere. \n"
                 "Perhaps it's you who should question your sanity? \n"
