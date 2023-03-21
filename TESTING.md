@@ -24,16 +24,20 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-
-PP3 (Python-only):
 - Users must enter a valid letter/word/string when prompted otherwise one of the things underneath will happen.
-    - You cannot enter anything other than directions (North, West, East or South) or Get (item).
-    - You cannot break anything by writing any special characters (!*"#%).
-    - You cannot break anything by writing the wrong words.
-    - If you write "Go" somewhere that is not the directions you will get a "You cannot go that way" message.
-    - If you write "Get" on a non existent item you will get a "Cannot get (item)" message.
-    - If you write something else that is not a command you will get an "Invalid command" message.
-- The application has been tester numerous times to ensure that the user cannot break it by inputting the wrong commands.
+
+| Screenshot | Notes |
+| --- | --- |
+| ![screenshot](documentation/invalid.png) |  You cannot enter anything other than directions (North, West, East or South) or Get (item). |
+| ![screenshot](documentation/special.png) | You cannot break anything by writing any special characters (!*"#%).|
+| ![screenshot](documentation/forward.png) | If you write "Go" somewhere that is not the directions you will get a "You cannot go that way" message.|
+| ![screenshot](documentation/forward.png) | You cannot break anything by writing the wrong words.|
+| ![screenshot](documentation/items.png) | If you write "Get" on a non existent item you will get a "Cannot get (item)" message.|
+| ![screenshot](documentation/invalid.png) |  If you write something else that is not a command you will get an "Invalid command" message. |
+
+- The application has been tested numerous times to ensure that the user cannot break it by inputting the wrong commands.
+
+
 
 
 
