@@ -105,13 +105,9 @@ and mapped out before coding began using a free version of
 [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
 
 Below I made a map for directions in the game and was used as a flowchart to know which areas and directions I needed to add.
-<details>
-<summary>  Map  </summary>
 
 ![screenshot](documentation/map.png)
 
-</details>
-<br>
 
 ### Classes & Functions
 
