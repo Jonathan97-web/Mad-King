@@ -83,6 +83,7 @@ while True:
         f"You are in the {current_room}\n"
     )
     print(f"You can go: {directions}")
+    print("To go in a direction write: 'Go Direction'")
     print(f"To pickup items write 'Get (Item)'")
     print(
         f"Backpack items: {Fore.RED}{inventory}"
