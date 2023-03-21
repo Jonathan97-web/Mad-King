@@ -84,7 +84,7 @@ while True:
     )
     print(f"You can go: {directions}")
     print("To go in a direction write: 'Go Direction'")
-    print(f"To pickup items write 'Get (Item)'")
+    print(f"To pickup items write {Fore.YELLOW}'Get (Item)'")
     print(
         f"Backpack items: {Fore.RED}{inventory}"
         f"\n{'-' * 27}"
