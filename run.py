@@ -258,7 +258,7 @@ while True:
             msg = f"You travel to {direction}."
 
         except Exception:
-            msg = f"You can't go that way."
+            msg = f"{Fore.RED}You can't go that way."
 
     # Picking up items
     elif action == 'Get':
@@ -274,9 +274,9 @@ while True:
                     msg = f"You already have the {item}."
 
             else:
-                msg = f"Can't find {item}."
+                msg = f"{Fore.RED}Can't find {item}."
         except Exception:
-            msg = f"Can't find {item}."
+            msg = f"{Fore.RED}Can't find {item}."
 
     # Any other commands invalid
     else:
