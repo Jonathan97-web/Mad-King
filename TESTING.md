@@ -10,6 +10,7 @@ I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jonathan97-web/mad-king/main/run.py) | ![screenshot](documentation/validation-python.png) | All clear, no errors found. |
+| rooms.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jonathan97-web/Mad-King/main/rooms.py) | ![screenshot](documentation/rooms.png) | All clear, no errors found. |
 
 
 ## Lighthouse Audit
