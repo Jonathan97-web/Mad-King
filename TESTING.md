@@ -44,6 +44,8 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Bugs
 
-There are no remaining bugs that I am aware of.
+| Screenshot | Notes |
+| --- | --- |
+| ![screenshot](documentation/bug1.png) |  KeyboardInterrupt with CTRL + C |
 
 ---
