@@ -83,10 +83,10 @@ while True:
         f"You are in the {current_room}\n"
     )
     print(f"You can go: {directions}")
-    print("To go in a direction write: 'Go Direction'")
+    print(f"To go in a direction write: {Fore.MAGENTA}'Go (Direction)'")
     print(f"To pickup items write {Fore.YELLOW}'Get (Item)'")
     print(
-        f"Backpack items: {Fore.RED}{inventory}"
+        f"Backpack items: {Fore.YELLOW}{inventory}"
         f"\n{'-' * 27}"
     )
 
@@ -96,7 +96,7 @@ while True:
     # Zone messages
     if current_room == "Clear Grounds":
         print(
-            "You arrive at Clear Grounds,\n"
+            "You arrive at Clear Grounds,\n\n"
             "To the North you see a castle fitting a King. \n"
             "To the East you see an empty barracks, \n"
             "which looks it could contain something useful."
@@ -105,14 +105,14 @@ while True:
     if current_room == "Mythical Armoury":
         print(
             "You arrive at the Mythical Armoury, \n"
-            "To the West is the Clear Grounds \n"
+            "To the West is the Clear Grounds \n\n"
             "In one of the weapon racks you see a Sword hanging there.\n"
             "Will you pick it up?"
         )
 
     if current_room == "Castle Gardens":
         print(
-            "You arrive at Castle Gardens. \n"
+            "You arrive at Castle Gardens. \n\n"
             "The garden seems well tended \n"
             "But there are no signs of any groundkeepers.\n"
             "To the South you can see Clear Grounds. \n"
@@ -121,7 +121,7 @@ while True:
 
     if current_room == "Castle Gates":
         print(
-            "You arrive at the Castle Gates. \n"
+            "You arrive at the Castle Gates. \n\n"
             "You see no sign of life in this area either. \n"
             "You start to wonder if it's a good idea to enter the castle. \n"
             "You feel pulled towards the castle. \n"
@@ -131,7 +131,7 @@ while True:
 
     if current_room == "Castle Main Hall":
         print(
-            "You arrive at the Castle Main Hall. \n"
+            "You arrive at the Castle Main Hall. \n\n"
             "You see a big table in the center of the room. \n"
             "The table is dined as if someone had dinner here recently. \n"
             "Will you venture further? \n"
@@ -142,7 +142,7 @@ while True:
 
     if current_room == "Royal Chambers":
         print(
-            "You arrive at the Royal Chambers. \n"
+            "You arrive at the Royal Chambers. \n\n"
             "In the room you can see what looks \n"
             "like to be the king of the castle. \n"
             "You try to converse with the king, \n"
@@ -154,7 +154,7 @@ while True:
 
     if current_room == "Castle Kitchens":
         print(
-            "You arrive at the Castle Kitchens. \n"
+            "You arrive at the Castle Kitchens. \n\n"
             "You can see a pot and food that has been prepared. \n"
             "You can feel a foul stench coming towards the South. \n"
             "To the West you see a door that leads "
@@ -165,7 +165,7 @@ while True:
 
     if current_room == "Castle Storage":
         print(
-            "You arrive at the Castle Storage \n"
+            "You arrive at the Castle Storage \n\n"
             "You see a figure in front of you. \n"
             "The figure approaches you \n"
             "It's a witch! She takes a swing at you \n\n"
@@ -238,18 +238,18 @@ while True:
             # Plural
             if nearby_item[-1] == 's':
                 print(
-                    f"You see {Fore.RED}{nearby_item}"
+                    f"You see {Fore.YELLOW}{nearby_item}\n"
                     )
 
             # Singular item starts with vowel
             elif nearby_item[0] in vowels:
-                print(f"You see an {Fore.RED}{nearby_item}")
+                print(f"You see an {Fore.YELLOW}{nearby_item}\n")
             # Singular item starts with consanant
             else:
-                print(f"You see a {Fore.RED}{nearby_item}")
+                print(f"You see a {Fore.YELLOW}{nearby_item}\n")
 
     # Accept player's move as input
-    user_input = input('Enter your move: \n')
+    user_input = input('Enter your move: \n\n')
 
     # Splits move into words
     next_move = user_input.split(' ')
@@ -293,4 +293,4 @@ while True:
 
     # Any other commands invalid
     else:
-        msg = "Invalid Command"
+        msg = f"{Fore.RED}Invalid Command\n"
