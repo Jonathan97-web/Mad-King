@@ -93,9 +93,12 @@ while True:
         print(
             "You arrive at the Mythical Armoury, \n"
             "To the West is the Clear Grounds \n\n"
-            "In one of the weapon racks you see a Sword hanging there.\n"
-            "Will you pick it up?"
         )
+        if "Sword" not in inventory:
+            print(
+                "In one of the weapon racks you see a Sword hanging there.\n"
+                "Will you pick it up?"
+            )
 
     if current_room == "Castle Gardens":
         print(
@@ -268,10 +271,10 @@ while True:
                 if item not in inventory:
 
                     inventory.append(rooms[current_room]["Item"])
-                    msg = f"{item} retrieved!"
+                    msg = f"{Fore.YELLOW}{item} retrieved!\n"
 
                 else:
-                    msg = f"You already have the {item}."
+                    msg = f"{Fore.RED}You already have the {item}."
 
             else:
                 msg = f"{Fore.RED}Can't find {item}."
