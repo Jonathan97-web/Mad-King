@@ -66,12 +66,14 @@
 
 - **Input validation**
 
-    - You cannot enter anything other than directions (North, West, East or South) or Get (item).
-    - You cannot break anything by writing any special characters (!*"#%).
-    - If you write "Go" somewhere that is not the directions you will get a "You cannot go that way" message.
-    - If you write "Get" on a non existent item you will get a "Cannot get (item)" message.
-    - If you write something else that is not a command you will get an "Invalid command" message.
-
+| Screenshot | Notes |
+| --- | --- |
+| ![screenshot](documentation/invalid.png) |  You cannot enter anything other than directions (North, West, East or South) or Get (item). |
+| ![screenshot](documentation/special.png) | You cannot break anything by writing any special characters (!*"#%).|
+| ![screenshot](documentation/forward.png) | If you write "Go" somewhere that is not the directions you will get a "You cannot go that way" message.|
+| ![screenshot](documentation/forward.png) | You cannot break anything by writing the wrong words.|
+| ![screenshot](documentation/items.png) | If you write "Get" on a non existent item you will get a "Cannot get (item)" message.|
+| ![screenshot](documentation/invalid.png) |  If you write something else that is not a command you will get an "Invalid command" message. |
 
 ### Future Features
 
